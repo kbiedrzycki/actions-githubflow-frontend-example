@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Store payload
         run: |
-          echo '${{ fromJSON(github.event.client_payload) }}' | jq . > ./temp.json
+          echo '${{ toJson(github.event.client_payload) }}' | jq . > ./temp.json
           cat ./temp.json
