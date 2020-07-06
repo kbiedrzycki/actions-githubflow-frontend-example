@@ -11,4 +11,5 @@ jobs:
       - name: Store payload
         run: |
           echo '${{ toJson(github.event.client_payload) }}' | jq . > ./temp.json
+          ls -la
           cat ./temp.json
